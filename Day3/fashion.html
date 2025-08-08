@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/51babbf03c.js" crossorigin="anonymous"></script>
+    <style>
+        .fashion{
+            background-color: rgb(233, 233, 240);
+            height: 80%;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            border-radius: 10px;
+        }
+        header{
+            height: 150px;
+        }
+        .logo{
+           color:rgb(17, 17, 17);
+           justify-content: space-around;
+
+        }
+        .fashion ul{
+           list-style-type: none;
+           display: flex;
+           justify-content: space-around;
+        }
+        .fashion ul li{
+           padding: 0% 5%;
+        }
+        .fashion ul li a{
+           color: rgb(8, 8, 8);
+           text-decoration: none;
+           font-size: 15px;
+        } 
+       .fashion a:hover{
+           background-color: rgb(168, 156, 156);
+        } 
+        .drop{
+          cursor: pointer;
+        }
+        .down a{
+           display: block;
+           color: black;
+           text-decoration: none;
+           padding: 10px 15px;
+        }
+        .drop .down{
+           display: none;
+           position: absolute;
+           background-color: white;
+           min-width: 100px;
+           box-shadow: 2px 2px 5px black;
+        }
+       .drop:hover .down{
+          display: block;
+        } 
+        #container{
+            background-image: url(https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03072024-TopBrandBanner-Z3-P3-Ishin-Vredevogel-flat75.jpg);
+            height: 90vh;
+            transition: 4s;
+            background-size: 100vw 100vh;
+            position: relative;
+            /* margin-bottom: 100px; */
+        }
+        #arrow-1{
+            position:absolute;
+            top: 80%;
+            transform: rotateY(180deg); 
+            cursor: pointer;    
+            z-index: 1;  
+        }
+        #arrow-2{
+            position:absolute;
+            right: 0;
+            top: 80%; 
+            cursor: pointer;    
+            z-index: 1;
+        }
+        .images{
+            display: flex;
+            position: absolute;
+            bottom: 7px;
+            right: 10px;
+            border-bottom-left-radius: 20px;
+        }
+    </style>
+</head>
+<body>      
+    <header>
+        <div class="fashion">
+            <h1 class="logo">FASHION STORE</h1>
+            <form action>
+                <input type="text" name="" id="" placeholder="Search for brands and more">
+            </form>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>HOME</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-info"></i>ABOUT</a></li>
+                <div class="drop">
+                    <li><a href="#"><i class="fa-solid fa-list"></i>CATEGORY</a></li>
+                    <div class="down">
+                <a href="">Fashion</a>
+                <a href="./mob.html" target="_blank">Mobile</a>
+                <a href="">Furniture</a>
+                <a href="">Personal Care</a>
+                <a href="">Toys and Baby</a>
+                    </div></div>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>CART</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>ACCOUNT</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="b1"></div>
+        <section>
+            <div class="arrows">
+                <img onclick="prev()" id="arrow-1" src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__right_arrow_head-512.png" alt="" height="90px" width="70px">
+                <img onclick="next()" id="arrow-2" src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__right_arrow_head-512.png" alt="" height="90px" width="70px">
+           </div>
+           <div id="container">
+           <div class="images">
+               <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/5bf5c70cc6928946.jpg?q=60" alt="" class="abc" height="70px" width="70px">
+               <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/c9c7b904fae51a5a.jpg?q=60" alt="" class="abc def" height="70px" width="70px">
+               <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/3b455b17093d587d.jpeg?q=60" alt="" class="abc" height="70px" width="70px">
+               <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/29e369a8eaf3bdd4.jpeg?q=60" alt="" class="abc" height="70px" width="70px">
+           </div>
+    </main>
+</body></html>
