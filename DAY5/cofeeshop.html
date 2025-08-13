@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AD Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: cursive;
+      background-color: blanchedalmond;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgb(70, 51, 51);
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffcc66;
+    }
+
+    .navbar nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .navbar nav a:hover {
+      text-decoration: underline;
+    }
+
+    .register-btn {
+      background-color: #d88a3d;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 50px;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/029/371/627/non_2x/cup-of-coffee-and-coffee-beans-on-table-coffee-day-concept-generative-ai-free-photo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 600px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .hero-text span {
+      color: #e3b04b;
+    }
+
+    .hero-text p {
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .hero-buttons button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .explore-btn,
+    .order-btn {
+      background-color: #d6b064;
+      color: #000;
+    }
+
+    .explore-btn:hover,
+    .order-btn:hover {
+      background-color: #c5a03c;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.74);
+    }
+
+    .cards {
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .cards:hover {
+      transform: translateY(-5px);
+    }
+
+    .cards img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cards p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .cards h4 {
+      margin-top: 8px;
+      font-weight: normal;
+    }
+    
+
+    footer {
+      background-color: rgb(70, 51, 51);
+      display: flex;
+      justify-content: space-evenly;
+      padding: 30px 10px;
+      color: antiquewhite;
+      flex-wrap: wrap;
+      
+    }
+  
+
+    footer .column {
+      min-width: 150px;
+      margin: 10px 0;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    footer strong {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">COSTA<br>Coffee</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Order Online</a>
+      <a href="#">Our story</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <a href="logincosta.html" class="register-btn">Register</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Enjoy The Most <br><span>Delicious Coffee</span></h1>
+      <p>
+        Start your day with coffee, enhancing productivity and mood.
+        Its invigorating aroma sets a focused tone for tackling tasks with renewed energy and positivity.
+      </p>
+      <div class="hero-buttons">
+        <button class="explore-btn">Explore</button>
+        <button class="order-btn">Order Coffee ☕</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cards">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.9zfc5nBS7mo_ripzG6GTfwHaFY" alt="Americano Coffee">
+      <p>Americano</p>
+      <h4>A coffee drink typically made from equal parts espresso...</h4>
+    </div>
+    <div class="cards">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.Slfgrmeq6ujLqltgNN7DDwHaEu" alt="Black Coffee">
+      <p>Black Coffee</p>
+      <h4>Black coffee is a hot coffee beverage simply made...</h4>
+    </div>
+    <div class="cards">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.ASThRaCdB5X1oOUi3Md1sQHaLH" alt="Mocha Coffee">
+      <p>Mocha Coffee</p>
+      <h4> Coffee drink known for its chocalate, sweet, rich and...</h4>
+    </div>
+    <div class="cards">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.sSZrpnbB1dLDmA0hhATq9wHaEO" alt="Breve Coffee">
+      <p>Breve Coffee</p>
+      <h4>Breve is a coffee drink made with equal parts espresso and...</h4>
+    </div>
+    <div class="cards">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.HKAJhIAr1RdwRnEIDhzF_gHaE8" alt="Cappuccino Coffee">
+      <p>Cappuccino</p>
+      <h4>A cappuccino is a mixture of espresso and steamed milk...</h4>
+    </div>
+    <div class="cards">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.qfMtEoV9uPdWtjrhfgBNUAHaF7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="macchiato coffee">
+      <p>Macchiato</p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="column Navigation">
+      <ul>
+        <li><strong>NAVIGATION</strong></li><li>&#128508;</li>
+        <li>About</li>
+        <li>Order Online</li>
+        <li>Our story</li>
+        <li>FAQs</li>
+      </ul>
+    </div>
+
+    <div class="Dietary Information">
+      <ul>
+        <li><strong>DIATERY INFORMATION</strong></li>
+        <li>Detailed dietary information</li>
+      </ul>
+    </div>
+
+    <div class="contact us">
+      <ul>
+        <li><strong>CONTACT US</strong></li>
+        <li>privacy policy</li>
+        <li>Terms & Conditions</li>
+        
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
