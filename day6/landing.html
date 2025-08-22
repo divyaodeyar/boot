@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+          
+        }
+        
+        #container {
+            transition-duration: 1s;
+            position: relative;
+            background-image: url('./assets/coffee1.jpg');
+            height: 110vh;
+            width: 100vw;
+            background-size: cover;
+        }
+          
+
+
+         .mini{
+            position: absolute;
+            display: flex;
+            bottom: 30px;
+            right: 190px;
+            gap: 10px;
+
+
+
+        }
+        .mini .img:hover{
+            border: 2px solid white;
+            transition: 5;
+            height: 100px;
+            width: 150px;
+            
+        }
+
+        .mini .img.active{
+            opacity: 1;
+        }
+
+        
+
+        .mini img{
+            border-radius: 10px;
+             width: 140px;
+             height: 80px;
+             object-fit: cover;
+             cursor: pointer;
+             opacity: 0.5;
+
+        }
+
+       
+        /* .arrow img{
+             height: 50px;
+            
+            
+        } */
+
+        /* #arrow1{
+            position: absolute;
+            top: 50%;
+            transform: rotateY(180deg);
+        }
+
+        #arrow2{
+            position: absolute;
+            right: 0;
+            top:50%;
+        } */
+
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+   
+        <!-- <div class="arrow">
+            <img  onclick="prev()" id="arrow1" src="./assets/arrow.webp" alt="Loading">
+            <img  onclick="next()" id="arrow2" src="./assets/arrow.webp" alt="Loading">
+
+        </div> -->
+
+        <div class="mini">
+            <img class="img active" onclick="change(0)" src="./assets/coffee2.jpg" alt="Loding">
+            <img class="img" onclick="change(1)" src="./assets/coffee3.webp" alt="Loding">
+            <img class="img" onclick="change(2)" src="./assets/coffee4.jpg" alt="Loding">
+            <img class="img" onclick="change(3)" src="./assets/coffee5.jpg" alt="Loding">
+            <img class="img" onclick="change(4)" src="./assets/coffee6.jpg" alt="Loding">
+            
+            
+
+        </div>
+
+    </div>
+
+    <script src="./landing.js"></script>
+    
+</body>
+</html>
