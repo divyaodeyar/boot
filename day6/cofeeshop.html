@@ -4,15 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AD Cafe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
   <link rel="stylesheet" href="style.css" />
 
   <style>
     body {
       margin: 0;
       font-family: cursive;
-      background-color: blanchedalmond;
+      /* background-color: blanchedalmond; */
       color: #fff;
     }
+     header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
 
     .navbar {
       display: flex;
@@ -20,6 +27,7 @@
       align-items: center;
       padding: 20px 50px;
       background-color: rgb(70, 51, 51);
+      
     }
 
     .navbar .logo {
@@ -38,6 +46,24 @@
     .navbar nav a:hover {
       text-decoration: underline;
     }
+
+     @media screen and (min-width:768px){
+      .header ul{
+       background-color: blanchedalmond;
+       display: flex;
+       justify-content: space-around;
+       text-decoration: none;
+       list-style-type: none;
+       padding: 20px;
+      font-size: x-large;
+      }
+    }
+
+      .icon{
+            display: none;
+        }
+        
+
 
     .register-btn {
       background-color: #d88a3d;
@@ -110,11 +136,11 @@
             box-sizing: border-box;
         }
         
-        .container1 {
+        .container2 {
             transition-duration: 1s;
-            position: relative;
+            position: relative;  
             background-image: url('./assets/coffee1.jpg');
-            height: 110vh;
+            height: 100vh;
             width: 100vw;
             background-size: cover;
             background-repeat: no-repeat;
@@ -131,17 +157,27 @@
 
 
         }
+        .mini .img:hover{
+          border: 2px solid white;
+          transition: 5;
+          height: 100px;
+          width: 150px;
+          opacity: 1;
+        }
 
         .mini img{
              width: 140px;
-             height: 80px;
-             object-fit: cover;
+             height: 80px;   
              cursor: pointer;
+             opacity: 0.5;
 
+        }
+        .mini .img.active{
+          opacity: 1;
         }
 
        
-        .arrow img{
+        /* .arrow img{
              height: 50px;
             
             
@@ -157,9 +193,9 @@
             position: absolute;
             right: 0;
             top:50%;
-        }
+        } */
 
-    .container2 {
+    .container1 {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
@@ -175,8 +211,8 @@
       color: #000;
       padding: 20px;
       border-radius: 10px;
-      text-align: center;
-      width: 200px;
+      /* text-align: center; */
+      width: 210px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
@@ -193,12 +229,62 @@
     }
 
     .cards p {
-      margin-top: 10px;
+      margin-bottom: 10px;
       font-weight: bold;
+      text-align: center;
+
     }
     .cards h4 {
       margin-top: 8px;
       font-weight: normal;
+    }
+
+    .cards1{
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      /* text-align: center; */
+      width: 210px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .cards1 img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cards1 h4 {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+
+    }
+
+    .text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .text1 h2{
+      align-items: center;
+      padding-left: 450px;
+      margin-bottom: 10px;
+    }
+
+    .text1 p{
+      font-size: 16px;
+      color: #333;
+      align-items: center;
+      
     }
     
 
@@ -234,7 +320,7 @@
       margin-bottom: 8px;
     }
 
-    .fooer-bottom {
+    .footer-bottom {
       width: 100%;
       text-align: center;
       padding: 10px ;
@@ -247,6 +333,10 @@
 
 <body>
   <header class="navbar">
+    <div class="icon">
+
+      <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="logo">COSTA<br>Coffee</div>
     <nav>
       <a href="#">Home</a>
@@ -271,64 +361,97 @@
       </div>
     </div>
   </section>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  
 
-  <div class="container1" id="container">
-   
-        <div class="arrow">
-            <img  id="arrow1" onclick="prev()" src="./assets/arrow.webp" alt="previous">
-            <img  id="arrow2" onclick="next()" src="./assets/arrow.webp" alt="next">
 
-        </div>
-
-        <div class="mini">
-            <img onclick="change(0)" src="./assets/coffee2.jpg" alt="Loding">
-            <img onclick="change(1)" src="./assets/coffee3.webp" alt="Loding">
-            <img onclick="change(2)" src="./assets/coffee4.jpg" alt="Loding">
-            <img onclick="change(3)" src="./assets/coffee5.jpg" alt="Loding">
-            <img onclick="change(4)" src="./assets/coffee6.jpg" alt="Loding">
-            
-            
-
-        </div>
-
-    </div>
-
-    <script src="./landing.js"></script>
-
-  <section class="container2">
+  <section class="container1">
     <div class="cards">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.9zfc5nBS7mo_ripzG6GTfwHaFY" alt="Americano Coffee">
       <p>Americano</p>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.9zfc5nBS7mo_ripzG6GTfwHaFY" alt="Americano Coffee">
       <h4>A coffee drink typically made from equal parts espresso...</h4>
     </div>
     <div class="cards">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.Slfgrmeq6ujLqltgNN7DDwHaEu" alt="Black Coffee">
       <p>Black Coffee</p>
-      <h4>Black coffee is a hot coffee beverage simply made...</h4>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.Slfgrmeq6ujLqltgNN7DDwHaEu" alt="Black Coffee">
+       <h4>Black coffee is a hot coffee beverage simply made...</h4>
     </div>
     <div class="cards">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.ASThRaCdB5X1oOUi3Md1sQHaLH" alt="Mocha Coffee">
       <p>Mocha Coffee</p>
-      <h4> Coffee drink known for its chocalate, sweet, rich and...</h4>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.ASThRaCdB5X1oOUi3Md1sQHaLH" alt="Mocha Coffee">
+        <h4> Coffee drink known for its chocalate, sweet, rich and...</h4>
     </div>
     <div class="cards">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.sSZrpnbB1dLDmA0hhATq9wHaEO" alt="Breve Coffee">
       <p>Breve Coffee</p>
+      <img src="https://tse1.mm.bing.net/th/id/OIP.sSZrpnbB1dLDmA0hhATq9wHaEO" alt="Breve Coffee">
       <h4>Breve is a coffee drink made with equal parts espresso and...</h4>
     </div>
     <div class="cards">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.HKAJhIAr1RdwRnEIDhzF_gHaE8" alt="Cappuccino Coffee">
       <p>Cappuccino</p>
-      <h4>A cappuccino is a mixture of espresso and steamed milk...</h4>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.HKAJhIAr1RdwRnEIDhzF_gHaE8" alt="Cappuccino Coffee">
+       <h4>A cappuccino is a mixture of espresso and steamed milk...</h4>
     </div>
     <div class="cards">
+       <p>Macchiato</p>
       <img src="https://tse3.mm.bing.net/th/id/OIP.qfMtEoV9uPdWtjrhfgBNUAHaF7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="macchiato coffee">
-      <p>Macchiato</p>
       <h4>A cappuccino is a mixture of espresso and steamed milk...</h4>
 
     </div>
   </section>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+
+
+  <div class="container2" id="container">
+   
+        <!-- <div class="arrow">
+            <img  id="arrow1" onclick="prev()" src="./assets/arrow.webp" alt="previous">
+            <img  id="arrow2" onclick="next()" src="./assets/arrow.webp" alt="next">
+
+        </div> -->
+
+        <div class="mini">
+            <img class="img active" onclick="change(0)" src="./assets/coffee2.jpg" alt="Loding">
+            <img class="img" onclick="change(1)" src="./assets/coffee3.webp" alt="Loding">
+            <img class="img" onclick="change(2)" src="./assets/coffee44.jpg" alt="Loding">
+            <img class="img" onclick="change(3)" src="./assets/coffee5.jpg" alt="Loding">
+            <img class="img" onclick="change(4)" src="./assets/coffee6.jpg" alt="Loding">
+            
+        </div>
+      </div>
+
+    <script src="./landing.js"></script>
+
+    <section class="text">
+      <div class="text1">
+        <h2>Cold Beverages</h2>
+        <p>Looking for a beverage to keep you chilled? Try our indulgent Iced Capp™, refreshing Cold Brew, Frozen French Vanilla & much more!</p>
+    </section>
+
+    <section class="container1">
+    <div class="cards1">
+      <img src="https://tims-assets.s3.ap-south-1.amazonaws.com/assets/product_images/Cold-Beverages/ColdBeverages_01_ColdCoffee.png" alt="Americano Coffee">
+      <h4>Cold Coffee</h4>
+    </div>
+    <div class="cards1">
+      
+      <img src="https://tims-assets.s3.ap-south-1.amazonaws.com/assets/product_images/Cold-Beverages/ColdBeverages_02_IcedLatte.png" alt="Black Coffee">
+       <h4>Iced Latte</h4>
+    </div>
+    <div class="cards1">
+       <img src="https://tims-assets.s3.ap-south-1.amazonaws.com/assets/product_images/Cold-Beverages/ColdBeverages_03_IcedAmericano.png" alt="Mocha Coffee">
+        <h4>Iced Americano</h4>
+    </div>
+    <div class="cards1">
+      <img src="https://tims-assets.s3.ap-south-1.amazonaws.com/assets/product_images/Cold-Beverages/ColdBeverages_19_VanillaColdBre.png" alt="Breve Coffee">
+      <h4>Vanilla Cold Brew</h4>
+    </div>
+    
+  </section>
+
+     
+   
+      
+      
 
   <footer>
     <div class="column Navigation">
@@ -356,7 +479,7 @@
         
       </ul>
     </div>
-      <div class="fooer-bottom">
+      <div class="footer-bottom">
         <p>@All Rights Reserved</p>
     </div>
   </footer>
